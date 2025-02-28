@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white : hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+    --Very-light-gray: hsl(0, 0%, 95%); /*(background, headings, buttons) */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Transparent-white);
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-family: "Lexend Deca", serif;
+}
+
+.wrapper {
+    width: 900px;
+    height: 500px;
+    display: flex;
+}
+
+.card {
+    width: 33%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    padding: 0 2rem;
+}
+
+.sedans {
+    background-color: var(--Bright-orange);
+}
+
+.suvs {
+    background-color: var(--Dark-cyan);
+}
+
+.luxury {
+    background-color: var(--Very-dark-cyan);
+}
+
+.sedans h1,
+.suvs h1,
+.luxury h1 {
+    width: 100%;
+    font-family: "Big Shoulders Display", serif;
+    color: var(--Very-light-gray);
+    padding: 1.6rem 0;
+}
+
+.sedans p,
+.suvs p,
+.luxury p {
+    color: var(--Transparent-white);
+    padding: 1.6rem 0;
+}
+
+.sedans button,
+.suvs button,
+.luxury button {
+    background-color: var(--Very-light-gray);
+    color: var(--Very-dark-cyan);
+    font-weight: 600;
+    width: 150px;
+    padding: 0.9rem;
+    border: 2px solid var(--Very-light-gray);
+    border-radius: 40px;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: 0.3s;
+}
+
+.sedans button {
+    color: var(--Bright-orange);
+}
+
+.suvs button {
+    color: var(--Dark-cyan);
+}
+
+.luxury button {
+    color: var(--Very-dark-cyan);
+}
+
+.sedans button:hover,
+.suvs button:hover,
+.luxury button:hover {
+    background-color: transparent;
+    color: var(--Transparent-white);
+}
+
+.attribution { font-size: 11px; text-align: center; margin: 1rem 0; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: 400px;
+        height: 100%;
+        flex-direction: column;
+        padding: 2rem 0;
+    }
+
+    .card {
+        width: 100%;
+        padding: 2rem 3rem;
+    }
+    
+}
+
+@media (max-width: 486px) {
+    .wrapper {
+        width: 300px;
+        height: 100%;
+        flex-direction: column;
+        padding: 2rem 0;
+    }
+
+    .card {
+        width: 100%;
+        padding: 2rem 3rem;
+    }
+    
+}
